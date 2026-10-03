@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UzbekistonRP Launcher</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#10131a;color:#fff;font-family:Arial,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center}
+.card{width:min(92%,420px);background:#191e28;border-radius:22px;padding:28px;text-align:center;box-shadow:0 15px 50px #0008}
+.logo{width:90px;height:90px;border-radius:22px;background:#252c38;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:800}
+h1{margin:8px 0;font-size:28px}p{color:#aeb6c4}.bar{height:12px;background:#303744;border-radius:99px;overflow:hidden;margin:24px 0 10px}.fill{height:100%;width:0;background:#35c759;transition:width .15s}.percent{font-size:14px;color:#aeb6c4}button{width:100%;border:0;border-radius:14px;padding:15px;background:#35c759;color:#071008;font-weight:700;font-size:16px;margin-top:20px}button:disabled{opacity:.5}
+.small{margin-top:16px;font-size:13px;color:#7f8998}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="logo">UZ</div>
+  <h1>UzbekistonRP</h1>
+  <p>Launcher fayllari tayyorlanmoqda...</p>
+  <div class="bar"><div id="fill" class="fill"></div></div>
+  <div id="percent" class="percent">0%</div>
+  <button id="start" disabled>O‘yinni boshlash</button>
+  <div class="small">Version 1.0.0</div>
+</div>
+<script>
+let p=0;
+const fill=document.getElementById('fill'), percent=document.getElementById('percent'), start=document.getElementById('start');
+const timer=setInterval(()=>{
+  p++;
+  fill.style.width=p+'%';
+  percent.textContent=p+'%';
+  if(p>=100){clearInterval(timer); start.disabled=false; start.textContent='O‘yinni boshlash';}
+},35);
+start.onclick=()=>{
+  alert('SA-MP client ulanishi keyingi bosqichda qo‘shiladi.');
+};
+</script>
+</body>
+</html>

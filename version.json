@@ -1,0 +1,9 @@
+{
+  "app_name": "UzbekistonRP Launcher",
+  "version": "1.0.0",
+  "server": {
+    "host": "uzdeveloper.uz",
+    "port": 7777
+  },
+  "apk": "https://uzdeveloper.uz/launcher.apk"
+}
